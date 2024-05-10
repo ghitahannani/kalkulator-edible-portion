@@ -16,7 +16,7 @@ st.write ('''
 
 st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
-
+st.title('Mengenal Edible Portion Pada Bahan Pangan')
 st.subheader('Definisi Edible Portion', divider='rainbow')
 st.write ('Edible portion adalah bagian dari makanan yang dapat dimakan atau dikonsumsi setelah bagian-bagian yang tidak dapat dimakan atau tidak diinginkan telah dihilangkan.')
 
@@ -47,7 +47,7 @@ daftar_produk = {
 }
 
 kategori_produk =st.selectbox('Pilih Kategori Produk:', list(daftar_produk.keys()))
-if daftar_produk[kategori_produk]:
+if daftar_produk [kategori_produk]:
        produk_pilihan = st.selectbox(f'Pilih Jenis{kategori_produk.lower()}:', daftar_produk[kategori_produk])
 
 #menghitung edible portion
@@ -60,7 +60,8 @@ st.write ('bobot yang utuh pada bahan pangan atau sampel', bobot_utuh_bahan )
 hitung_edibleportion = st.button('Hitung Edible Portion')
 if hitung_edibleportion:
             perhitungan_edible_portion = bobot_yang_dapat_dimakan / bobot_utuh_bahan * 100
-            st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut adalah, {perhitungan_edible_portion} %')
+            st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut yaitu {produk_pilihan} adalah, {perhitungan_edible_portion} %')
+          
 st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
 
@@ -111,7 +112,7 @@ st.write ('''
           2. Talas: 86%
           3. Bengkuang: 85% ''')
         
-st.write('Buah:')
+st.write('Kacang-Kacangan:')
 st.write ('''
           1. Kacang Hijau: 100%
           2. Kacang Kedelai: 100%
