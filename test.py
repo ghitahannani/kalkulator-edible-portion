@@ -32,6 +32,11 @@ st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::
 st.title('Kalkulator Edible Portion Pada Bahan Pangan')
 st.write ('Aplikasi ini berguna untuk mempermudah menghitung edible portion pada bahan pangan. Silahkan gulir kebawah dan masukkan bobot yang dapat dimakan dari bahan pangan atau sampel (dalam gram) dan bobot utuh bahan pangan atau sampel (dalam gram) pada layar.')
 
+option = st.selectbox(
+    'Silahkan Pilih Bahan Pangan yang Ingin Anda Ketahui',
+    ('Daging', 'Ikan', 'Telur','Buah','Sayur','Serealia','Umbi','Kacang-Kacangan'))
+st.write("Anda memilih:", option)
+
 #menghitung edible portion
 bobot_yang_dapat_dimakan = st.number_input ('Masukkan bobot yang dapat dimakan pada bahan pangan atau sampel (dalam gram)')
 st.write ('bobot yang dapat dimakan pada bahan pangan atau sampel', bobot_yang_dapat_dimakan )
@@ -43,6 +48,15 @@ hitung_edibleportion = st.button('Hitung Edible Portion')
 if hitung_edibleportion:
             perhitungan_edible_portion = bobot_yang_dapat_dimakan / bobot_utuh_bahan * 100
             st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut adalah, {perhitungan_edible_portion} %')
+          st.ballons()
+
+st.subheader('Berikut daftar % Edible Portion', divider='rainbow')
+data_df = pd.DataFrame(
+    {
+        'Bahan Pangan': ['Daging Ayam', 'Daging Kambing', 'Daging Sapi' 'Ikan Layang', 'Ikan Mas', 'Ikan Mujair', 'Telur Ayam','Telur Bebek', 'Alpukat', 'Durian', 'Mangga', 'Melon, 'Bayam', 'Jamur Kuping', 'Kangkung', 'Timun', 'Labu Siam', 'Beras','Jagung Pipil', 'Kentang', 'Talas', ''Bengkuang', 'Kacang Hijau', 'Kacang Kedelai','Kacang Merah'],
+        '% Edible Portion(dalam %)': ['58','100','100', '80', '80', '80', '89', '90','61','22','65','65','58,1','71','100','60','55','83','100','100','85','86','84','100','100','100']
+    }
+)
 
 st.markdown("Terimakasih telah menggunakan aplikasi ini &mdash;\
             :fish::broccoli::potato::onion::sunflower::apple:")
