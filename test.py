@@ -11,14 +11,14 @@ selected = st.sidebar.radio('Menu',['Anggota Kelompok','Apa Itu Edible Portion?'
 
 selected = input("Masukkan pilihan Anda: ")
 
-if selected == 'Anggota Kelompok': 
-    show_team_members()
-elif selected == 'Apa Itu Edible Portion':
-    definition_edible_portion()
-elif selected == 'Perhitungan Edible Portion':
-    calculate_edible_portion_content()
-elif selected == 'Komposisi Pangan':
-    composition_edible_portion()
+if selected=='Anggota Kelompok': 
+    'show_team_members()'
+elif selected=='Apa Itu Edible Portion':
+    'definition_edible_portion()'
+elif selected=='Perhitungan Edible Portion':
+    'calculate_edible_portion_content()'
+elif selected=='Komposisi Pangan':
+    'composition_edible_portion()'
 else:
     print("Pilihan tidak valid. Silakan pilih opsi yang tersedia.")
 
