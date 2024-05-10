@@ -60,7 +60,7 @@ st.write ('bobot yang utuh pada bahan pangan atau sampel', bobot_utuh_bahan )
 hitung_edibleportion = st.button('Hitung Edible Portion')
 if hitung_edibleportion:
             perhitungan_edible_portion = bobot_yang_dapat_dimakan / bobot_utuh_bahan * 100
-            st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut yaitu {produk_pilihan} adalah, {perhitungan_edible_portion} %')
+            st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut adalah, {perhitungan_edible_portion} %')
           
 st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
