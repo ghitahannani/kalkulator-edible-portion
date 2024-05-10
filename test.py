@@ -31,6 +31,7 @@ st.write ('''
 
 st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
+
 st.title('Kalkulator Edible Portion Pada Bahan Pangan')
 st.write ('Aplikasi ini berguna untuk mempermudah menghitung Edible Portion pada bahan pangan. Silahkan gulir kebawah dan masukkan bobot yang dapat dimakan dari bahan pangan atau sampel (dalam gram) dan bobot utuh bahan pangan atau sampel (dalam gram) pada layar.')
 
@@ -60,6 +61,7 @@ hitung_edibleportion = st.button('Hitung Edible Portion')
 if hitung_edibleportion:
             perhitungan_edible_portion = bobot_yang_dapat_dimakan / bobot_utuh_bahan * 100
             st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut adalah, {perhitungan_edible_portion} %')
+st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
 
 st.subheader('Berikut daftar % Edible Portion', divider='rainbow')
@@ -69,7 +71,7 @@ st.write ('''
           1. Daging Ayam: 58%
           2. Daging Sapi: 100%
           3. Daging Kambing: 100% ''')
-        
+
 st.write('Ikan:')
 st.write ('''
           1. Ikan Bawal: 80%
