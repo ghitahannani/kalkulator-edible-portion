@@ -48,8 +48,6 @@ daftar_produk = {
 kategori_produk =st.selectbox('Pilih Kategori Produk:', list(daftar_produk.keys()))
 if daftar_produk[kategori_produk]:
        produk_pilihan = st.selectbox(f'Pilih Jenis{kategori_produk.lower()}:', daftar_produk[kategori_produk])
-else:
-       produk_pilihan = kategori_produk
 
 #menghitung edible portion
 bobot_yang_dapat_dimakan = st.number_input ('Masukkan bobot yang dapat dimakan pada bahan pangan atau sampel (dalam gram)')
@@ -61,8 +59,8 @@ st.write ('bobot yang utuh pada bahan pangan atau sampel', bobot_utuh_bahan )
 hitung_edibleportion = st.button('Hitung Edible Portion')
 if hitung_edibleportion:
             perhitungan_edible_portion = bobot_yang_dapat_dimakan / bobot_utuh_bahan * 100
-            st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut yaitu {produk_pilihan} adalah, {perhitungan_edible_portion} %')
-st.ballons()
+            st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut adalah, {perhitungan_edible_portion} %')
+
 
 st.subheader('Berikut daftar % Edible Portion', divider='rainbow')
 st.write ('Dalam daftar ini dapat dilihat berapa jumlah Edible Portion yang baik dalam 100 gram bahan pangan.')
