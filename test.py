@@ -5,27 +5,9 @@ st. set_page_config (page_title= 'edibleportion', page_icon=':chicken', layout= 
 st. title('Hai! Kami siap membantu anda! :chicken: :wave:')
 st. write('Aplikasi ini merupakan hasil project dari kami, kelompok 9 untuk memenuhi tugas akhir mata kuliah logika pemrograman komputer. Silahkan gulir layar anda kebawah!')
 
-def main():
-        st.sidebar.header('Navigasi')
-selected = st.sidebar.radio('Menu',['Anggota Kelompok','Apa Itu Edible Portion?','Perhitungan Edible Portion','Komposisi Pangan'])
-
-selected = input("Masukkan pilihan Anda: ")
-
-if selected=='Anggota Kelompok': 
-    'show_team_members()'
-elif selected=='Apa Itu Edible Portion':
-    'definition_edible_portion()'
-elif selected=='Perhitungan Edible Portion':
-    'calculate_edible_portion_content()'
-elif selected=='Komposisi Pangan':
-    'composition_edible_portion()'
-else:
-    print("Pilihan tidak valid. Silakan pilih opsi yang tersedia.")
-
-def show_team_members():
-        st.subheader('Anggota Kelompok 9', divider='rainbow')
-        st.write('Perkenalkan anggota kelompok kami yang terdiri dari')
-        st.write ('''
+st.subheader('Anggota Kelompok 9', divider='rainbow')
+st.write('Perkenalkan anggota kelompok kami yang terdiri dari')
+st.write ('''
           1. Bunga Sekar Ningrum (2320514)
           2. Delvina Neva Ghita Hannani (2320516)
           3. Dilla Aulia Efendi (2320518)
@@ -34,9 +16,9 @@ def show_team_members():
 
 st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
-def definition_edible_portion():
-        st.subheader('Definisi Edible Portion', divider='rainbow')
-        st.write ('Edible portion adalah bagian dari makanan yang dapat dimakan atau dikonsumsi setelah bagian-bagian yang tidak dapat dimakan atau tidak diinginkan telah dihilangkan.')
+
+st.subheader('Definisi Edible Portion', divider='rainbow')
+st.write ('Edible portion adalah bagian dari makanan yang dapat dimakan atau dikonsumsi setelah bagian-bagian yang tidak dapat dimakan atau tidak diinginkan telah dihilangkan.')
 
 st.subheader('Manfaat dan Fungsi Mengetahui Edible Portion', divider='rainbow')
 st.write ('''
@@ -49,9 +31,8 @@ st.write ('''
 
 st. markdown(':fish::broccoli::potato::onion::sunflower::apple::fish::broccoli::potato::onion::sunflower::apple::fish:')
 
-def calculate_edible_portion_content():
-        st.title('Kalkulator Edible Portion Pada Bahan Pangan')
-        st.write ('Aplikasi ini berguna untuk mempermudah menghitung edible portion pada bahan pangan. Silahkan gulir kebawah dan masukkan bobot yang dapat dimakan dari bahan pangan atau sampel (dalam gram) dan bobot utuh bahan pangan atau sampel (dalam gram) pada layar.')
+st.title('Kalkulator Edible Portion Pada Bahan Pangan')
+st.write ('Aplikasi ini berguna untuk mempermudah menghitung Edible Portion pada bahan pangan. Silahkan gulir kebawah dan masukkan bobot yang dapat dimakan dari bahan pangan atau sampel (dalam gram) dan bobot utuh bahan pangan atau sampel (dalam gram) pada layar.')
 
 daftar_produk = {
        'Daging':['Daging Ayam', 'Daging Sapi', 'Daging Kambing'],
@@ -83,63 +64,60 @@ if hitung_edibleportion:
             st. write(f'Nilai edible portion dari bahan pangan atau sampel tersebut yaitu {produk_pilihan} adalah, {perhitungan_edible_portion} %')
 st.ballons()
 
-def composition_edible_portion():
-        st.subheader('Berikut daftar % Edible Portion', divider='rainbow')
-        st.write ('Dalam daftar ini dapat dilihat berapa jumlah Edible Portion yang baik dalam 100 gram bahan pangan.')
-        st.write('Daging:')
-        st.write ('''
+st.subheader('Berikut daftar % Edible Portion', divider='rainbow')
+st.write ('Dalam daftar ini dapat dilihat berapa jumlah Edible Portion yang baik dalam 100 gram bahan pangan.')
+st.write('Daging:')
+st.write ('''
           1. Daging Ayam: 58%
           2. Daging Sapi: 100%
           3. Daging Kambing: 100% ''')
         
-        st.write('Ikan:')
-        st.write ('''
+st.write('Ikan:')
+st.write ('''
           1. Ikan Bawal: 80%
           2. Ikan Bandeng: 80%
           3. Ikan Mas: 80% 
           4. Ikan Asin: 70% ''')
         
-        st.write('Telur:')
-        st.write ('''
+st.write('Telur:')
+st.write ('''
           1. Telur Ayam: 89%
           2. Telur Bebek: 90% ''')
         
-        st.write('Buah:')
-        st.write ('''
+st.write('Buah:')
+st.write ('''
           1. Alpukat: 61%
           2. Apel: 88%
           3. Durian: 22%
           4. Mangga: 65%
           5. Melon: 58,1% ''')
         
-        st.write('Sayur:')
-        st.write ('''
+st.write('Sayur:')
+st.write ('''
           1. Bayam: 71%
           2. Jamur Kuping: 100%
           3. Kangkung: 60%
           4. Timun: 55%
           5. Labu Siam: 83% ''')
         
-        st.write('Serealia:')
-        st.write ('''
+st.write('Serealia:')
+st.write ('''
           1. Beras: 100%
           2. Jagung Pipil: 100% ''')
         
-        st.write('Umbi:')
-        st.write ('''
+st.write('Umbi:')
+st.write ('''
           1. Kentang: 84%
           2. Talas: 86%
           3. Bengkuang: 85% ''')
         
-        st.write('Buah:')
-        st.write ('''
+st.write('Buah:')
+st.write ('''
           1. Kacang Hijau: 100%
           2. Kacang Kedelai: 100%
           3. Kacang Merah: 100% ''')
 
-        st.write ('Sumber dari Kementrian Kesehatan Republik Indonesia yaitu Tabel Komposisi Pangan Indonesia 2017')
+st.write ('Sumber dari Kementrian Kesehatan Republik Indonesia yaitu Tabel Komposisi Pangan Indonesia 2017')
 
 st.markdown("Terimakasih telah menggunakan aplikasi ini &mdash;\
             :fish::broccoli::potato::onion::sunflower::apple:")
-if __name__=='__main__':
-       main()
